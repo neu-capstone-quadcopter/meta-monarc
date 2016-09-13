@@ -11,7 +11,9 @@ Please see the respective READMEs in the layer subdirectories
 
 2. Clone this repository into the `/stuff` directory
 
-3. Replace the `bblayers.conf` file in `/build/conf` with the `bblayers.conf` file included here.
+3. Init submodules by running `git submodule update --init --recursive` in this directory.
+
+4. Replace the `bblayers.conf` file in `/build/conf` with the `bblayers.conf` file included here.
 
 ## Building
 
