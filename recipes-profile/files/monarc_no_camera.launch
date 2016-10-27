@@ -1,0 +1,12 @@
+<launch>
+	<!-- GPS -->
+	<node name="nmea_driver" pkg="nmea_navsat_driver" type="nmea_serial_driver">
+		<param name="port" value="/dev/ttyHS1"/>
+		<param name="baud" value="9600"/>
+	</node>
+
+	<!-- UART -->
+	<node name="monarc_uart_driver_node" pkg="monarc_uart_driver" type="monarc_uart_driver_node">
+                <param name="uart_port" value="/dev/ttyHS3"/>
+        </node>
+</launch>
