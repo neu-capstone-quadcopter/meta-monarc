@@ -1,0 +1,12 @@
+[Unit]
+Description=Launcher for the Monarc's ROS system
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/default/roscore
+ExecStartPre=/bin/touch ${CMAKE_PREFIX_PATH}/.catkin
+ExecStart=/opt/ros/kinetic/bin/roslaunch -p $ROS_PORT /home/root/monarc.launch 
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
